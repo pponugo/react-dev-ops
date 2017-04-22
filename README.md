@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pponugo/react-dev-ops.svg?branch=master)](https://travis-ci.org/pponugo/react-dev-ops)
+
 # React - [SAMPLE] Asset Library
 ---
 
