@@ -18,7 +18,7 @@ class Button extends React.Component {
            disabled, form, hidden, label, name, type, value } = this.props;
 
         if (hidden) {
-            return null;
+            return (<div />);
         }
 
         return (
