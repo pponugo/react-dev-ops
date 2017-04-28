@@ -45,7 +45,7 @@ class List extends React.Component {
         const { className, disabled, hidden, type } = this.props;
 
         if (hidden) {
-            return null;
+            return (<div>{''}</div>);
         }
 
         const ListType = TYPES[type];
