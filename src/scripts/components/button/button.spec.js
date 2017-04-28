@@ -2,49 +2,9 @@
 import React from 'react';
 import { assert, expect } from 'chai';
 import { shallow } from 'enzyme';
-import { spy } from 'sinon';
 import Button from './button.component';
 
 describe('<Button />', () => {
-    describe('Property - onEvent', () => {
-        let wrapper;
-        let onEvent;
-        beforeEach(() => {
-            onEvent = spy();
-            wrapper = shallow(<Button onEvent={onEvent} value="test" />);
-        });
-
-        it('Should emit "click" event', () => {
-            wrapper.find('button').simulate('click');
-            assert.ok(onEvent.calledOnce, 'should call "onEvent"');
-            assert.ok(onEvent.alwaysCalledWith('click', 'test'), 'should call with correct parameters');
-        });
-
-        it('Should emit "mouseDown" event', () => {
-            wrapper.find('button').simulate('mouseDown');
-            assert.ok(onEvent.calledOnce, 'should call "onEvent"');
-            assert.ok(onEvent.alwaysCalledWith('mouseDown', 'test'), 'should call with correct parameters');
-        });
-
-        it('Should emit "mouseUp" event', () => {
-            wrapper.find('button').simulate('mouseUp');
-            assert.ok(onEvent.calledOnce, 'should call "onEvent"');
-            assert.ok(onEvent.alwaysCalledWith('mouseUp', 'test'), 'should call with correct parameters');
-        });
-
-        it('Should emit "focus" event', () => {
-            wrapper.find('button').simulate('focus');
-            assert.ok(onEvent.calledOnce, 'should call "onEvent"');
-            assert.ok(onEvent.alwaysCalledWith('focus', 'test'), 'should call with correct parameters');
-        });
-
-        it('Should emit "blur" event', () => {
-            wrapper.find('button').simulate('blur');
-            assert.ok(onEvent.calledOnce, 'should call "onEvent"');
-            assert.ok(onEvent.alwaysCalledWith('blur', 'test'), 'should call with correct parameters');
-        });
-    });
-
     describe('Property - aria-label', () => {
       // TODO
     });
